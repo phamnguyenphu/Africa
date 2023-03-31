@@ -42,8 +42,7 @@ struct AnimalDetailView: View {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal)
                 
-                // GALLERY`
-                
+                // GALLERY
                 Group {
                     HeadingView(headerImage: "photo.on.rectangle.angled", headerName: "Wilderness in Pictures")
                     InsetGalleryView(animal: animal)
@@ -51,6 +50,11 @@ struct AnimalDetailView: View {
                 .padding(.horizontal)
                 
                 // FACTS
+                Group {
+                    HeadingView(headerImage: "questionmark.circle", headerName: "Did you know ?")
+                    InsetFactView(animal: animal)
+                }
+                .padding(.horizontal)
                 
                 // DESCRIPTION
                 
