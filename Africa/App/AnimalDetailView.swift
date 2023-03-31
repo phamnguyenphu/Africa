@@ -15,73 +15,75 @@ struct AnimalDetailView: View {
     // MARK: - BODY
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack(alignment: .center, spacing: 20) {
-                // HERO IMAGE
-                Image(animal.image)
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(8)
-                
-                // TITLE
-                Text(animal.name.uppercased())
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.primary)
-                    .padding(.vertical, 8)
-                    .background(
-                        Color.accentColor
-                            .frame(height: 6)
-                            .offset(y: 24)
-                    )
-                
-                // HEADLINE
-                Text(animal.headline)
-                    .font(.headline)
-                    .foregroundColor(.accentColor)
-                    .multilineTextAlignment(.leading)
-                    .padding(.horizontal)
-                
-                // GALLERY
-                Group {
-                    HeadingView(headerImage: "photo.on.rectangle.angled", headerName: "Wilderness in Pictures")
-                    InsetGalleryView(animal: animal)
-                }
-                .padding(.horizontal)
-                
-                // FACTS
-                Group {
-                    HeadingView(headerImage: "questionmark.circle", headerName: "Did you know ?")
-                    InsetFactView(animal: animal)
-                }
-                .padding(.horizontal)
-                
-                // DESCRIPTION
-                Group {
-                    HeadingView(headerImage: "info.circle", headerName: "All about \(animal.name)")
-                    Text(animal.description)
+        NavigationStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(alignment: .center, spacing: 20) {
+                    // HERO IMAGE
+                    Image(animal.image)
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(8)
+                    
+                    // TITLE
+                    Text(animal.name.uppercased())
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.primary)
+                        .padding(.vertical, 8)
+                        .background(
+                            Color.accentColor
+                                .frame(height: 6)
+                                .offset(y: 24)
+                        )
+                    
+                    // HEADLINE
+                    Text(animal.headline)
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
                         .multilineTextAlignment(.leading)
-                        .layoutPriority(1)
-                        .lineSpacing(8)
-                }
-                .padding(.horizontal)
-                
-                // MAP
-                Group {
-                    HeadingView(headerImage: "map", headerName: "National Parks")
-                    InsetMapView()
-                }
-                .padding(.horizontal)
-                
-                // LINK
-                
-                Group {
-                    HeadingView(headerImage: "books.vertical", headerName: "Learn more")
-                    ExternalWeblinkView(animal: animal)
-                }
-                .padding(.horizontal)
-            } //: VSTACK
-        } //: SCROLLVIEW
+                        .padding(.horizontal)
+                    
+                    // GALLERY
+                    Group {
+                        HeadingView(headerImage: "photo.on.rectangle.angled", headerName: "Wilderness in Pictures")
+                        InsetGalleryView(animal: animal)
+                    }
+                    .padding(.horizontal)
+                    
+                    // FACTS
+                    Group {
+                        HeadingView(headerImage: "questionmark.circle", headerName: "Did you know ?")
+                        InsetFactView(animal: animal)
+                    }
+                    .padding(.horizontal)
+                    
+                    // DESCRIPTION
+                    Group {
+                        HeadingView(headerImage: "info.circle", headerName: "All about \(animal.name)")
+                        Text(animal.description)
+                            .multilineTextAlignment(.leading)
+                            .layoutPriority(1)
+                            .lineSpacing(8)
+                    }
+                    .padding(.horizontal)
+                    
+                    // MAP
+                    Group {
+                        HeadingView(headerImage: "map", headerName: "National Parks")
+                        InsetMapView()
+                    }
+                    .padding(.horizontal)
+                    
+                    // LINK
+                    
+                    Group {
+                        HeadingView(headerImage: "books.vertical", headerName: "Learn more")
+                        ExternalWeblinkView(animal: animal)
+                    }
+                    .padding(.horizontal)
+                } //: VSTACK
+            } //: SCROLLVIEW
+        } //: NAVIGATION STACK
         .navigationTitle("Learn about \(animal.name)")
         .navigationBarTitleDisplayMode(.inline)
     }
