@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB4604F129D9671B00373E2B /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4604F029D9671B00373E2B /* VideoModel.swift */; };
 		AB4604F329D967A000373E2B /* VideoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4604F229D967A000373E2B /* VideoListItemView.swift */; };
+		AB4604F529DAA7D500373E2B /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4604F429DAA7D500373E2B /* VideoPlayerView.swift */; };
+		AB4604F829DAAF1400373E2B /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4604F729DAAF1400373E2B /* VideoPlayerHelper.swift */; };
 		AB54DEB229D6B062007B4EE7 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54DEB129D6B062007B4EE7 /* AnimalDetailView.swift */; };
 		AB54DEB429D6B67C007B4EE7 /* HeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54DEB329D6B67C007B4EE7 /* HeadingView.swift */; };
 		AB54DEB629D6B9CC007B4EE7 /* InsetGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54DEB529D6B9CC007B4EE7 /* InsetGalleryView.swift */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		AB4604F029D9671B00373E2B /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		AB4604F229D967A000373E2B /* VideoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListItemView.swift; sourceTree = "<group>"; };
+		AB4604F429DAA7D500373E2B /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		AB4604F729DAAF1400373E2B /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
 		AB54DEB129D6B062007B4EE7 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
 		AB54DEB329D6B67C007B4EE7 /* HeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingView.swift; sourceTree = "<group>"; };
 		AB54DEB529D6B9CC007B4EE7 /* InsetGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGalleryView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB4604F629DAAF0300373E2B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AB4604F729DAAF1400373E2B /* VideoPlayerHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		ABBE833529D56D6500D03B05 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +126,7 @@
 		ABBE834029D56D6500D03B05 /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				AB4604F629DAAF0300373E2B /* Helper */,
 				ABBE837D29D58D3700D03B05 /* Extension */,
 				ABBE837A29D5855100D03B05 /* Models */,
 				ABBE837729D5818E00D03B05 /* Views */,
@@ -188,6 +201,7 @@
 				AB86FB1A29D6CB750067B093 /* InsetMapView.swift */,
 				AB86FB1C29D6D2520067B093 /* ExternalWeblinkView.swift */,
 				AB4604F229D967A000373E2B /* VideoListItemView.swift */,
+				AB4604F429DAA7D500373E2B /* VideoPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +318,7 @@
 				ABBE837929D581A800D03B05 /* CoverImageView.swift in Sources */,
 				AB54DEB229D6B062007B4EE7 /* AnimalDetailView.swift in Sources */,
 				AB54DEB429D6B67C007B4EE7 /* HeadingView.swift in Sources */,
+				AB4604F829DAAF1400373E2B /* VideoPlayerHelper.swift in Sources */,
 				ABBE837C29D585C600D03B05 /* CoverImageModel.swift in Sources */,
 				AB86FB1B29D6CB750067B093 /* InsetMapView.swift in Sources */,
 				ABBC6EA329D5FB1A00C579A8 /* AnimalModel.swift in Sources */,
@@ -313,6 +328,7 @@
 				ABBE837029D5760600D03B05 /* VideoListView.swift in Sources */,
 				ABBE837429D5763000D03B05 /* GalleryView.swift in Sources */,
 				ABBE837F29D58DD800D03B05 /* CodableBundleExtension.swift in Sources */,
+				AB4604F529DAA7D500373E2B /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
