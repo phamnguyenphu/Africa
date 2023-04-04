@@ -54,9 +54,7 @@ struct GalleryView: View {
                 Slider(value: $gridColumn, in: 2 ... 4, step: 1)
                     .padding(.horizontal)
                     .onChange(of: gridColumn) { _ in
-                        withAnimation(.easeIn) {
-                            gridSwitch()
-                        }
+                        gridSwitch()
                     }
                 
                 // MARK: - GRID
