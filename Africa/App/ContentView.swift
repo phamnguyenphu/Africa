@@ -19,7 +19,7 @@ struct ContentView: View {
     @State private var gridColumn: Int = 1
     @State private var toolbarIcon: String = "square.grid.2x2"
     
-    func swithGrid() {
+    func switchGrid() {
         gridLayout = Array(repeating: GridItem(.flexible()), count: Int(gridLayout.count % 3 + 1))
         gridColumn = gridLayout.count
         switch gridColumn {
@@ -92,7 +92,7 @@ struct ContentView: View {
                             withAnimation(.easeInOut(duration: 0.75)) {
                                 isGridViewActive = true
                                 haptics.impactOccurred()
-                                swithGrid()
+                                switchGrid()
                             }
                             
                         } label: {
